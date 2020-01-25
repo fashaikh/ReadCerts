@@ -47,29 +47,32 @@ namespace ReadCerts
                 {
                     foreach (X509Certificate2 cert in certCollection)
                     {
-                        try
+                        if (!cert.Subject.Contains("azure") && !cert.Subject.Contains("FullOSTransport"))
                         {
-                            sb.Append($"cert.Thumbprint: {cert.Thumbprint}<br/>");
-                        }
-                        catch { }
-                        try
-                        {
-                            sb.Append($"cert.HasPrivateKey: {cert.HasPrivateKey}<br/>");
-                        }
-                        catch { }
-                        try
-                        {
-                            sb.Append($"cert.Issuer: {cert.Issuer}<br/>");
-                        }
-                        catch { }
-                        try
-                        {
-                            sb.Append($"cert.Subject: {cert.Subject}<br/>");
-                        }
-                        catch { }
-                        sb.Append($"==========================================<br/>");
+                            try
+                            {
+                                sb.Append($"cert.Thumbprint: {cert.Thumbprint}<br/>");
+                            }
+                            catch { }
+                            try
+                            {
+                                sb.Append($"cert.HasPrivateKey: {cert.HasPrivateKey}<br/>");
+                            }
+                            catch { }
+                            try
+                            {
+                                sb.Append($"cert.Issuer: {cert.Issuer}<br/>");
+                            }
+                            catch { }
+                            try
+                            {
+                                sb.Append($"cert.Subject: {cert.Subject}<br/>");
+                            }
+                            catch { }
+                            sb.Append($"==========================================<br/>");
 
 
+                        }
                     }
                 }
                 else
@@ -94,27 +97,30 @@ namespace ReadCerts
                 {
                     foreach (X509Certificate2 cert in certCollection)
                     {
-                        try
+                        if (!cert.Subject.Contains("azure") && !cert.Subject.Contains("FullOSTransport"))
                         {
-                            sb.Append($"cert.Thumbprint: {cert.Thumbprint}<br/>");
+                            try
+                            {
+                                sb.Append($"cert.Thumbprint: {cert.Thumbprint}<br/>");
+                            }
+                            catch { }
+                            try
+                            {
+                                sb.Append($"cert.HasPrivateKey: {cert.HasPrivateKey}<br/>");
+                            }
+                            catch { }
+                            try
+                            {
+                                sb.Append($"cert.Issuer: {cert.Issuer}<br/>");
+                            }
+                            catch { }
+                            try
+                            {
+                                sb.Append($"cert.Subject: {cert.Subject}<br/>");
+                            }
+                            catch { }
+                            sb.Append($"==========================================<br/>");
                         }
-                        catch { }
-                        try
-                        {
-                            sb.Append($"cert.HasPrivateKey: {cert.HasPrivateKey}<br/>");
-                        }
-                        catch { }
-                        try
-                        {
-                            sb.Append($"cert.Issuer: {cert.Issuer}<br/>");
-                        }
-                        catch { }
-                        try
-                        {
-                            sb.Append($"cert.Subject: {cert.Subject}<br/>");
-                        }
-                        catch { }
-                        sb.Append($"==========================================<br/>");
 
                     }
                 }
