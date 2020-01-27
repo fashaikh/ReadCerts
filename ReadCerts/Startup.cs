@@ -47,7 +47,7 @@ namespace ReadCerts
                 {
                     foreach (X509Certificate2 cert in certCollection)
                     {
-                        if (!cert.Subject.Contains("azure") && !cert.Subject.Contains("FullOSTransport"))
+                        if (!cert.Subject.Contains("azure", StringComparison.OrdinalIgnoreCase) && !cert.Subject.Contains("FullOSTransport", StringComparison.OrdinalIgnoreCase))
                         {
                             try
                             {
@@ -97,7 +97,7 @@ namespace ReadCerts
                 {
                     foreach (X509Certificate2 cert in certCollection)
                     {
-                        if (!cert.Subject.Contains("azure") && !cert.Subject.Contains("FullOSTransport"))
+                        if (!cert.Subject.Contains("azure", StringComparison.OrdinalIgnoreCase) && !cert.Subject.Contains("FullOSTransport", StringComparison.OrdinalIgnoreCase))
                         {
                             try
                             {
