@@ -182,12 +182,12 @@ namespace ReadCerts
                         }
                 else
                 {
-                    sb.Append($"NO CERTS FOUND in 'LocalMachineMy' !!<br/>");
+                    sb.Append($"Unable to read private CERT in App_Data !!<br/>");
                 }
             }
             catch (Exception ex)
             {
-                sb.Append($"Exception reading certs in 'LocalMachineMy':{ex.ToString()}<br/>");
+                sb.Append($"Exception reading private CERT in App_Data :{ex.ToString()}<br/>");
 
             }
 
