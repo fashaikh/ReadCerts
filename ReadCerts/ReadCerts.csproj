@@ -10,4 +10,17 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App_Data\certsanddomaintests.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App_Data\password.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
